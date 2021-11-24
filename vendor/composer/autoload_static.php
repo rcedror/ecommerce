@@ -6,8 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit6992e93fa033cc7821f429bf5ff48db1
 {
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/rcedror/php-classes/src',
+    public static $prefixLengthsPsr4 = array (
+        'R' => 
+        array (
+            'Rcedror\\' => 8,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Rcedror\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rcedror/php-classes/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -42,7 +52,8 @@ class ComposerStaticInit6992e93fa033cc7821f429bf5ff48db1
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->fallbackDirsPsr4 = ComposerStaticInit6992e93fa033cc7821f429bf5ff48db1::$fallbackDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit6992e93fa033cc7821f429bf5ff48db1::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit6992e93fa033cc7821f429bf5ff48db1::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit6992e93fa033cc7821f429bf5ff48db1::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit6992e93fa033cc7821f429bf5ff48db1::$classMap;
 
