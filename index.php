@@ -2,20 +2,17 @@
 
 require_once("vendor/autoload.php");
 
-$app = new \Slim\Slim();
+use \Slim\Slim;
+use \Rcedror\Page;
+
+$app = new Slim();
 
 $app->config('debug', true);
 
 $app->get('/', function() {
-    
-	$sql = new Rcedror\DB\Sql();
-
-	$result = $sql->select("SELECT * FROM tb_users");
-
-	echo json_encode($result);
-
-	//Testando commit
-
+  
+	$page = new Page();
+	$page->setTpl("index");
 });
 
 $app->run();
