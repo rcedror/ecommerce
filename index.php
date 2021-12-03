@@ -14,6 +14,8 @@ $app->get('/', function() {
 
 	echo json_encode($result);
 
+	//Testando commit
+
 });
 
 $app->run();
