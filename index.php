@@ -12,7 +12,9 @@ $app->config('debug', true);
 $app->get('/', function() {
   
 	$page = new Page();
-	$page->setTpl("index");
+
+	$data = array("nome" => "Renato");
+	$page->setTpl("index",$data);
 });
 
 $app->run();
